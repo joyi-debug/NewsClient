@@ -1,0 +1,4 @@
+<!-- 使用WebView组件展示新闻URL -->
+<web-view src="{{newsUrl}}" />
+
+

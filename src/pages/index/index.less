@@ -1,0 +1,56 @@
+.usermotto{
+  border:1px solid black;
+  width: 100%;
+}
+
+.news-tag-container{
+  width: 100%; //横向可滑动容器，用于放置新闻标签列表
+  overflow-x:scroll;
+  white-space: nowrap;
+  .news-tag{
+    display: inline-block;
+    margin: 4px 16px;
+    padding: 0px 4px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  .active-tag{
+    color: lightskyblue;
+    background-color: cornsilk;
+  }
+}
+
+page{
+  height: 100%;
+  display: flex;
+  .container{
+    width: 100%;
+    height: 100%;
+  }
+}
+.news-list-container{
+  width: 100%;
+  height: 100%;
+  .news-list{
+    height: 100%;
+    overflow-y: scroll;
+    .news-item{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 4rpx 12rpx;
+     //缩略图设置为宽和高120rpx的正方形
+      .preview-img{
+        width:120rpx;
+        height: 120rpx;
+        flex-shrink: 0;
+      }
+      .title{
+        //新闻标题和缩略图间隔12rpx
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+

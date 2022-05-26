@@ -1,0 +1,36 @@
+<view class="plane">
+  <text class="title">当前新闻分类</text>
+  <!-- 列表渲染出选中的新闻标签 -->
+  <view class="tag-list">
+    <view
+      class="selected-tag"
+      wx:for="{{selectedTagList}}"
+      wx:key="{{item}}"
+      data-tag-index="{{index}}"
+      bindtap="onRemoveTag"
+    >
+      {{item}}
+      <!-- 移除被选中的新闻标签的按钮 -->
+      <image class="close-icon" src="./images/close.png" />
+    </view>
+  </view>
+  <text class="title" style="margin-top:32rpx;">未选中新闻分类</text>
+  <view class="tag-list">
+    <!-- 列表渲染出未被选中的新闻标签 -->
+    <view
+      class="unselected-tag"
+      wx:for="{{unselectedTagList}}"
+      wx:key="item"
+      data-tag-index="{{index}}"
+      bindtap="onAddTag"
+    >
+      {{item}}
+      <!-- 选中新闻标签的按钮 -->
+      <image class="add-icon" src="./images/add.png" />
+    </view>
+  </view>
+  <!-- 保存当前页面的修改 -->
+  <button bindtap="saveSetting" class="tag-btn">保存修改</button>
+</view>
+
+
